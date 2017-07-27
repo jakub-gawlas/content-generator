@@ -7,14 +7,10 @@ const createEvaluator = require('js-native-template');
 
 const config = require('./config');
 
-const srcPath = path.resolve(config.srcPath);
-const outPath = path.resolve(config.outPath);
-
-const docuConfigPath = path.resolve(config.docuConfigPath);
-const docuConfig = require(docuConfigPath);
+const docuConfig = require(config.docuConfigPath);
 
 (async () => {
-  const filesPaths = await getFilesPaths(srcPath);
+  const filesPaths = await getFilesPaths(config.srcPath);
 
   const filesInfo = filesPaths.map(p => ({
     path: p,
@@ -114,14 +110,14 @@ const docuConfig = require(docuConfigPath);
    * Save result file
    */
   const OUT_RESULT_FILENAME = 'data.json';
-  const resultFilePath = path.join(outPath, OUT_RESULT_FILENAME);
+  const resultFilePath = path.join(config.outPath, OUT_RESULT_FILENAME);
   await fs.outputJSON(resultFilePath, result, { spaces: 2 });
 
   /**
    * Save resources
    */
   const OUT_RESOURCES_DIR = 'data';
-  const resourcesPath = path.join(outPath, OUT_RESOURCES_DIR);
+  const resourcesPath = path.join(config.outPath, OUT_RESOURCES_DIR);
   paths.resources.forEach(async p => {
     await fs.copy(p, path.join(resourcesPath, files[p].base));
   });

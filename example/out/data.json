@@ -1,0 +1,39 @@
+{
+  "name": "Example docu",
+  "description": "Foo bar baz",
+  "documents": [
+    {
+      "title": "Linking resource",
+      "tags": [
+        "link",
+        "resource"
+      ],
+      "content": "<h1 id=\"linking-resource\">Linking resource</h1>\n<p><img src=\"https://api.com/data/image.jpg\" /></p>\n"
+    },
+    {
+      "title": "Partials first",
+      "tags": [
+        "first",
+        "foo",
+        "bar"
+      ],
+      "content": "<h1 id=\"partials-first\">Partials first</h1>\n<h3>Foo</h3>\n\n<pre><code class=\"lang-foo\">foo foo foo\n</code></pre>\n<h3 id=\"bar\">Bar</h3>\n<ul>\n<li>bar</li>\n<li>bar</li>\n<li>bar</li>\n</ul>\n"
+    },
+    {
+      "title": "Partials second",
+      "tags": [
+        "second",
+        "foo",
+        "bar"
+      ],
+      "content": "<h1>Partials second</h1>\n\n<h3>Foo</h3>\n\n<pre><code class=\"lang-foo\">foo foo foo\n</code></pre>\n<h3 id=\"bar\">Bar</h3>\n<ul>\n<li>bar</li>\n<li>bar</li>\n<li>bar</li>\n</ul>\n"
+    },
+    {
+      "title": "Request",
+      "tags": [
+        "request"
+      ],
+      "content": "<h1>Request</h1>\n\n<p>Title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit</p>\n"
+    }
+  ]
+}
