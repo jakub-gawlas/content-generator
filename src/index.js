@@ -104,8 +104,6 @@ const docuConfig = require(config.docuConfigPath);
    */
   const result = Object.assign(docuConfig.spec, { documents });
 
-  console.log(JSON.stringify(result, null, 2));
-
   /**
    * Save result file
    */
