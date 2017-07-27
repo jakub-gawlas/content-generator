@@ -116,7 +116,7 @@ const docuConfig = require(config.docuConfigPath);
   /**
    * Save resources
    */
-  const OUT_RESOURCES_DIR = 'data';
+  const OUT_RESOURCES_DIR = 'resources';
   const resourcesPath = path.join(config.outPath, OUT_RESOURCES_DIR);
   paths.resources.forEach(async p => {
     await fs.copy(p, path.join(resourcesPath, files[p].base));
