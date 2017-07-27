@@ -66,7 +66,7 @@ const docuConfig = require(config.docuConfigPath);
         return files[`${fileToEval.dir}/${p}`].raw;
       },
     request: require('request-promise-native'),
-    link: p => `https://api.com/data/${path.basename(p)}`,
+    link: p => `${config.resourcesBaseURI}/${path.basename(p)}`,
   });
   const evaluateDocs = documentFiles.map(async f => {
     try {

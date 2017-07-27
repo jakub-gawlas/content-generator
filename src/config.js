@@ -1,7 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  srcPath: path.resolve(process.env.APP_SRC_PATH || './docu'),
-  outPath: path.resolve(process.env.APP_OUT_PATH || './out'),
-  docuConfigPath: path.resolve(process.env.APP_DOCU_CONFIG_PATH || './docu.config.json'),
+  srcPath: path.resolve(process.env.APP_SRC_PATH || './example/docu'),
+  outPath: path.resolve(process.env.APP_OUT_PATH || './example/out'),
+  docuConfigPath: path.resolve(
+    process.env.APP_DOCU_CONFIG_PATH || './example/docu.config.json'
+  ),
+  resourcesBaseURI:
+    process.env.APP_RESOURCES_BASE_URI || 'localhost:3000/files',
 };
