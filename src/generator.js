@@ -7,9 +7,10 @@ const createEvaluator = require('js-native-template');
 
 const config = require('./config');
 
-const docuConfig = require(config.docuConfigPath);
-
 async function generate() {
+  delete require.cache[require.resolve(config.docuConfigPath)];
+  const docuConfig = require(config.docuConfigPath);
+
   const filesPaths = await getFilesPaths(config.srcPath);
 
   const filesInfo = filesPaths.map(p => ({

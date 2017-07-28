@@ -2,10 +2,13 @@ const generate = require('./generator');
 const chokidar = require('chokidar');
 const config = require('./config');
 
-// Hot reloading generationmode
+// Hot reloading generation
 if (config.hotReloadMode) {
+  chokidar.watch(config.srcPath).on('all', onChange);
+  chokidar.watch(config.docuConfigPath).on('change', onChange);
+
   let timer = null;
-  chokidar.watch(config.srcPath).on('all', (event, path) => {
+  function onChange(event, path) {
     if (timer) {
       clearTimeout(timer);
       timer = null;
@@ -14,9 +17,10 @@ if (config.hotReloadMode) {
       generate();
       timer = null;
     }, 100);
-  });
+  }
+
   return;
 }
 
-// Single generation mode
+// Once generation
 generate();
