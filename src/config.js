@@ -8,4 +8,5 @@ module.exports = {
   ),
   resourcesBaseURI:
     process.env.APP_RESOURCES_BASE_URI || 'localhost:3000/files',
+  hotReloadMode: Boolean(process.env.APP_HOT_RELOAD) || false,
 };
