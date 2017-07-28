@@ -119,6 +119,6 @@ async function generate() {
   paths.resources.forEach(async p => {
     await fs.copy(p, path.join(resourcesPath, files[p].base));
   });
-};
+}
 
 module.exports = generate;
