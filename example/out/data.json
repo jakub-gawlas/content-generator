@@ -8,7 +8,7 @@
         "link",
         "resource"
       ],
-      "content": "<h1 id=\"linking-resource\">Linking resource</h1>\n<p><img src=\"localhost:3000/files/image.jpg\" /></p>\n"
+      "content": "<h1 id=\"linking-resource\">Linking resource</h1>\n<p><img src=\"http://localhost:3000/files/image.jpg\" /></p>\n"
     },
     {
       "title": "Partials first",

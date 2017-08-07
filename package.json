@@ -12,7 +12,7 @@
   "dependencies": {
     "chokidar": "^1.7.0",
     "fs-extra": "^4.0.0",
-    "js-native-template": "^1.0.0",
+    "js-native-template": "https://github.com/jakub-gawlas/js-native-template",
     "meta-marked": "^0.4.2",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4"
