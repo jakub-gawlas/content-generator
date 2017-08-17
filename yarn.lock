@@ -483,9 +483,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-"js-native-template@https://github.com/jakub-gawlas/js-native-template":
-  version "1.0.2"
-  resolved "https://github.com/jakub-gawlas/js-native-template#cb6a2df5b124e9751125aef01243d09de5b73bb3"
+js-native-template@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/js-native-template/-/js-native-template-1.0.3.tgz#59e13e768b7ad43248d13cc8a0735107760e8a45"
 
 js-yaml@~3.5.5:
   version "3.5.5"
