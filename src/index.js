@@ -23,4 +23,11 @@ if (config.hotReloadMode) {
 }
 
 // Once generation
-generate();
+(async () => {
+  try {
+    await generate();
+  } catch (err) {
+    console.error(err);
+    process.exit(0);
+  }
+})();
